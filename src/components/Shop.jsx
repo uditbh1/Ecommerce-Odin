@@ -1,7 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { useCart } from "./CartContext";
 
 const Shop = () => {
+  const { addToCart } = useCart();
   const [shopData, setShopData] = useState(null);
 
   useEffect(() => {
@@ -29,7 +31,10 @@ const Shop = () => {
               <div className="flex gap-2 mt-1 justify-between">
                 <span className="font-bold">£{product.price}</span>
               </div>
-              <button className="bg-primary text-white p-1 border rounded-md w-full hover:bg-emerald-900">
+              <button
+                onClick={() => addToCart(product)}
+                className="bg-primary text-white p-1 border rounded-md w-full hover:bg-emerald-900"
+              >
                 Add to Cart
               </button>
             </div>
