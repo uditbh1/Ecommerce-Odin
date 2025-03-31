@@ -2,6 +2,7 @@
 @theme{
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-primary: #123026;
+  --color-gray-500:#E6E3E4
 }
 *{
   font-family: var(--font-sans);
